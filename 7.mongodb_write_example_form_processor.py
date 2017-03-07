@@ -29,7 +29,7 @@ edition = form.getfirst('edition')
 price = form.getfirst('price')
 
 #connect to db server
-client = pymongo.MongoClient('mongodb://amos:TXG2Mju3@class-mongodb.cims.nyu.edu/amos')
+client = pymongo.MongoClient('mongodb://your_username:your_password@your_host_name/your_database_name')
 
 #make a new document in Python's JSON closest equivalent... a dictionary
 document = {
