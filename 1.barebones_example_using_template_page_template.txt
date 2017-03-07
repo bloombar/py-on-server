@@ -1,0 +1,25 @@
+Content-type: text/html;charset=utf-8
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>$title</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="$css_url" />
+    </head>
+    <body>
+        <div class="container">
+
+            <h1>$heading</h1>
+            <p>
+                This script was executed by the Python $python_version interpreter on the web server.  The output was sent to the web browser.
+            </p>
+            <p>
+                Using Templates is a common way to keep Python code separate from HTML code.  There are many sophisticated "templating engines" that can be added to python, although this script uses a very basic one incldued in the Python standard library.  See <a href="$link_url">for more info on Templating in Python</a>.
+            </p>
+
+        </div><!-- //.container -->
+    </body>
+</html>
+
+    
