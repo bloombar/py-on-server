@@ -11,10 +11,10 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 #connect to database
 import pymysql
 cxn = pymysql.connect(
-    host="warehouse", 
-    user="amos", 
-    passwd="pqvksah8", 
-    db="amos_db_design_spring_2016", 
+    host="your_host_name", 
+    user="your_user_name", 
+    passwd="your_password", 
+    db="your_database_name", 
     charset='utf8mb4',
     cursorclass=pymysql.cursors.DictCursor) 
 
