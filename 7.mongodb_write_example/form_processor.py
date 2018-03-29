@@ -18,7 +18,7 @@ form = cgi.FieldStorage()
 if "title" not in form or "author" not in form or "edition" not in form or "price" not in form:
     # if the user did not enter form data, send the browser back to the form page
     # we do this by sending a special HTTP location header to the browser
-    print("Location: ./index.html\n\n")
+    #print("Location: ./index.html\n\n")
     #exit now!
     sys.exit()
 
@@ -29,7 +29,11 @@ edition = form.getfirst('edition')
 price = form.getfirst('price')
 
 #connect to db server
-client = pymongo.MongoClient('your_mongodb_connection_string')
+try:
+	client = pymongo.MongoClient('mongodb://amos:TcW8xE9J@class-mongodb.cims.nyu.edu/amos')
+except pymongo.errors.ConnectionFailure as e:
+	#show connection error details
+    print(e.details)
 
 #make a new document in Python's JSON closest equivalent... a dictionary
 document = {
@@ -39,10 +43,13 @@ document = {
     'price': price
 }
 
-#insert a new document into the MongoDB collection
-client.amos.books.insert(document)
+try:
+	client.amos.books.insert(document)
+except pymongo.errors.OperationFailure as e:
+	#show operation error details
+    print(e.details)
 
 #send the browser to view the previous example page so the user can see the new set of books
 # we do this by sending a special HTTP location header to the browser
-print("Location: ../6.mongodb_read_example/\n\n")
+print("Location: ../6.mongo_db_read_example/index.py\n\n")
 

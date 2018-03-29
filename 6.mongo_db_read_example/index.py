@@ -12,7 +12,11 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 import pymongo
 
 #connect to db server
-client = pymongo.MongoClient('your_mongodb_connection_string')
+try:
+    client = pymongo.MongoClient('mongodb://amos:TcW8xE9J@class-mongodb.cims.nyu.edu/amos')
+except pymongo.errors.ConnectionFailure as e:
+    #show connection error details
+    print(e.details)
 
 #send raw HTTP response headers to web browser
 #NOTE: this must be the first thing sent to the web browser
