@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 
 #enable debugging... any errors will be output as HTML so they show up clearly in the web browser
 import cgi, cgitb
@@ -11,10 +11,10 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 #connect to database
 import pymysql
 cxn = pymysql.connect(
-    host="your_mysql_host_name", 
-    user="your_mysql_username", 
-    passwd="your_mysql_password", 
-    db="your_mysql_database_name", 
+    host="warehouse", 
+    user="amos", 
+    passwd="pqvksah8", 
+    db="amos_db_design_spring_2016", 
     charset='utf8mb4',
     cursorclass=pymysql.cursors.DictCursor) 
 

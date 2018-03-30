@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 
 #enable debugging... any errors will be output as HTML so they show up clearly in the web browser
 import cgi, cgitb
