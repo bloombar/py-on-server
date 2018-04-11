@@ -1,76 +1,29 @@
-/**
-* a little fun with CSS
-**/
-
-html, body {
-	margin: 0;
-	padding: 0;
-}
-
-.clear, .clearfix {
-	clear: both;
-}
-
-div.container {
-	width: 70%;
-	padding: 10%;
-	margin: 5% auto;
-	background-color: red;
-	color: white;
+.container {
+	width: 1000px;
+	border: 1px solid red;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
-	-ms-transform: rotate(1deg); /* IE 9 */
-	-webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
-	transform: rotate(1deg);
 }
-
-h1 {
-	font-family: geneva, serif;
-	text-transform: uppercase;
+h2 {
+	padding-left: 10px;
+	background-color: yellow;
 }
-
-article {
-	position: relative;
-	width: 23%;
-	height: 160px;
-	border: 1px solid white;
-	float: left;
-	margin: 5%;
-	-ms-transform: rotate(-1deg); /* IE 9 */
-	-webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
-	transform: rotate(-1deg);
-}
-
-article div.price {
-	position: absolute;
-	background-color: white;
-	color: red;
-	bottom: 0;
-	right: 0;
-	padding: 2px 4px;
-}
-
-/* form styles */
 form {
-	width: 550px;
-	margin: 0 auto;
+	text-align: left;
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
 }
-form .row {
-	margin-bottom: 10px;
-}
-form .row label, form .row input, form .row textarea, form .row select {
+img {
 	display: block;
-	float: left;
 }
-form .row label {
-	text-align: right;
-	width: 200px;
+
+input[type="text"], input[type="email"], input[type="password"] {
+	display: block;
 }
-form .row input, form .row textarea, form .row select {
-	margin-left: 10px;
-	width: 300px; 
-}
-form .row input[type=submit] {
-	border: 1px solid #aaffaa;
-	background-color: #55ff55;
-	height: 40px;
+
+label {
+/*	border: 1px solid green;
+*/
 }

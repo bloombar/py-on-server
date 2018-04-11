@@ -1,45 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Form Example</title>
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-    </head>
-    <body>
-        <div class="container">
 
-            <h1>Rate This Example!</h1>
+	<head>
+		<title>HTML Example</title>
 
-            <p>How would you rate this example?</p>
+		<link rel="stylesheet" 
+			type="text/css"
+			href="css/main.css" />
+		
+		<script type="text/javascript"
+			src="js/main.js">
+		</script>
 
-            <form action="form_processor.py" method="GET">
-                <div class="row">
-                    <label for="your_name">Your name</label>
-                    <input type="text" id="your_name" name="your_name" />
-                    <div class="clearfix"></div>
-                </div>
+	</head>
 
-                <div class="row">
-                    <label for="your_rating">Your rating of this example</label>
-                    <select id="your_rating" name="your_rating">
-                        <option value="">- select rating -</option>
-                        <option value="excellent">Excellent!</option>
-                        <option value="good">Good enough</option>
-                        <option value="okay">Okay</option>
-                        <option value="poor">Poor quality</option>
-                        <option value="awful">Awful!</option>
-                    </select>
-                    <div class="clearfix"></div>
-                </div>
+	<body>
 
-                <div class="row">
-                    <label for='submit'>Ready?</label>
-                    <input type="submit" id='submit' value="Rate it!" />
-                    <div class="clearfix"></div>
-                </div>
+		<div class="container">
 
-            </form>
+			<h1>HTML Example</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate porttitor ante. Donec risus ligula, mattis a varius ut, tincidunt eu nisi. Sed ultrices placerat purus eu placerat. Sed odio ipsum, viverra nec luctus eu, lacinia quis elit. Fusce non lectus sem. Sed eros orci, viverra sed molestie ac, maximus eu enim. Mauris in massa mi.
+			</p>
 
-        </div><!-- //.container -->
-    </body>
+			<img src="images/jif.gif" />
+
+			<form action="processor.py">
+				<h2>Register</h2>
+				<input name="name" type="text" placeholder="name" />
+				<input name="email" type="email" placeholder="email" />
+				<input name="password" type="password" placeholder="password" />
+
+				<input name="ok_spam" type="checkbox" />
+				<label>Sign me up for spam!</label>
+				<br />
+				<input name="ok_terms" type="checkbox" />
+				<label>I agree to your onorous conditions and terms!</label>
+				<br />
+				<input name="ok_social" type="checkbox" />
+				<label>Add me to your social media feed!</label>
+				<br />
+
+				<label>Select your interests:</label>
+
+				<br />
+				<select name="interests">
+					<option>Fungus</option>
+					<option>Algae</option>
+					<option>Mushrooms</option>
+					<option>Yeast</option>
+				</select>
+
+				<br />
+				<input type="submit" />
+
+			</form>
+
+
+		</div>
+
+	</body>
+
 </html>
+
+
+
+
